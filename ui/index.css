@@ -1,0 +1,21 @@
+#selectMenu {
+    margin-left: 10px;
+}
+
+.siimple-h6{
+    margin-top: 20px;
+}
+
+.selectButtons {
+    float: left;
+    margin-left: 15px;
+}
+
+.siimple-select {
+    float: left;
+}
+
+.status {
+    margin-top: 20px;
+    clear: both;
+}

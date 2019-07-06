@@ -1,0 +1,38 @@
+{
+  "name": "tucratch3-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "electron .",
+    "webpack": "webpack",
+    "rebuild": "./node_modules/.bin/electron-rebuild",
+    "build": "npm run clean;npm run build:osx;npm run build:win",
+    "build:osx": "npm run clean:osx;electron-packager . tucratch3-helper --out=dist/osx --platform=darwin --arch=x64 --electron-version=5.0.6 --icon=assets/appicon.icns",
+    "build:win": "npm run clean:win;electron-packager . tucratch3-helper --out=dist/win --platform=win32 --arch=x64 --electron-version=5.0.6 --icon=assets/appicon.ico",
+    "clean": "rm -rf ./dist",
+    "clean:osx": "rm -rf ./dist/osx",
+    "clean:win": "rm -rf ./dist/win"
+  },
+  "author": "MakTak",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "serialport": "^7.1.5",
+    "underscore": "^1.9.1",
+    "url": "^0.11.0",
+    "vue": "^2.6.10",
+    "webpack": "^4.35.2"
+  },
+  "devDependencies": {
+    "electron": "^5.0.6",
+    "electron-packager": "^14.0.1",
+    "electron-rebuild": "^1.8.5",
+    "jest": "^24.8.0",
+    "webpack-cli": "^3.3.5"
+  }
+}
