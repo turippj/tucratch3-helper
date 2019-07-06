@@ -52,8 +52,12 @@ expressApp.get('/:id/:num/:port', (req, res) => {
     const manifestID = String(req.params.id);
     const num = req.params.num;
     const port = req.params.port;
-    const pod = podCollection.getPod(manifestID, num);
-    res.json(pod.port[port].data);
+    const oldPod = podCollection.getPod(manifestID, num);
+    const message = `/${oldPod.manifest}-${oldPod.id}/${port}`;
+    connection.send(message).then((podCollection) => {
+        const pod = podCollection.getPod(manifestID, num);
+        res.json(pod.port[port].data);
+    });
 });
 
 expressApp.put('/:id/:num', (req, res) => {
