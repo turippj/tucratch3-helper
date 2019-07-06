@@ -4,5 +4,5 @@ tucratch3-helperは、[tucratch3](https://turippj.github.io/scratch-gui/)とTURI
 
 
 
-UPDATE: 2019/7/7
+UPDATE: 2019/7/7  
 VERSION: 1.0.0
