@@ -66,5 +66,8 @@ expressApp.put('/:id/:num', (req, res) => {
     const query = req.body;
     const pod = podCollection.getPod(manifestID, num);
     const message = `/${pod.manifest}-${pod.id}/${query.port} ${query.data}`;
-    res.send(connection.send(message));
+    connection.send(message).then((podCollection) => {
+        const pod = podCollection.getPod(manifestID, num);
+        res.json(pod.port[query.port].data);
+    });
 });
