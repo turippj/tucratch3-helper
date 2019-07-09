@@ -1,5 +1,5 @@
 {
-    "1001": {
+    "1b09a": {
         "name" : "LED",
         "port" : {
             "1" : {
@@ -15,5 +15,58 @@
                 "data": 0
             }
         }
+    },
+    "12d10": {
+        "name" : "BME280 sensor",
+        "port" : {
+            "1" : {
+                "name": "Temperature",
+                "data": 0
+            },
+            "2" : {
+                "name": "Humidity",
+                "data": 0
+            },
+            "3" : {
+                "name": "Pressure",
+                "data": 0
+            }
+        }
+    },
+    "12e48": {
+        "name" : "DRV8835 motor driver",
+        "port" : {
+            "1" : {
+                "name": "Motor1",
+                "data": 0
+            },
+            "2" : {
+                "name": "Motor2",
+                "data": 0
+            }
+        }
+    },
+    "112d4": {
+        "name" : "VL53L1X sensor",
+        "port" : {
+            "1" : {
+                "name": "Distance",
+                "data": 0
+            }
+        }
+    },
+    "14e67": {
+        "name" : "APDS-9960 sensor",
+        "port" : {
+            "1" : {
+                "name": "Brightness",
+                "data": 0
+            },
+            "2" : {
+                "name": "Proximity",
+                "data": 0
+            }
+        }
     }
+
 }
